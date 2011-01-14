@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/media/logo">
+        <file>GoXML_Icon.ico</file>
+    </qresource>
+</RCC>

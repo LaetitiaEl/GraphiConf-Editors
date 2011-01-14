@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GOCXMLLoadingFormClass</class>
+ <widget class="QWidget" name="GOCXMLLoadingFormClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>443</width>
+    <height>112</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GOCXMLLoadingForm</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="GOC_XML_Editor_Ressource.qrc">
+    <normaloff>:/media/logo/GoC_XML_Editor_Logo</normaloff>:/media/logo/GoC_XML_Editor_Logo</iconset>
+  </property>
+  <widget class="QProgressBar" name="progressBar">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>341</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="GOC_XML_Editor_Ressource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
