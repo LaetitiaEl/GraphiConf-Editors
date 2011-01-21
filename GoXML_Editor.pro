@@ -34,6 +34,8 @@ SOURCES += .\GOC_Framework\stdafx.cpp \
     .\GoXML_Editor\GOCMultiSpace.cpp \
     .\GoXML_Editor\GOCMultiObject.cpp \
     .\GoXML_Editor\main.cpp\
+    .\GoXML_Editor\GOCXMLPropertiesView.cpp \
+    GoXML_Editor/stdafx.cpp
 
 HEADERS  += \
     .\GOC_Framework\stdafx.h \
@@ -59,7 +61,9 @@ HEADERS  += \
     .\GoXML_Editor\GOCXMLLoadingForm.h \
     .\GoXML_Editor\GOCXMLEditor.h \
     .\GoXML_Editor\GOCMultiSpace.h \
-    .\GoXML_Editor\GOCMultiObject.h
+    .\GoXML_Editor\GOCMultiObject.h \
+    .\GoXML_Editor\GOCXMLPropertiesView.h \
+    GoXML_Editor/stdafx.h
 
 FORMS    += .\GoXML_Editor\GOCXMLEditor.ui \
     .\GoXML_Editor\GOCXMLLoadingForm.ui
