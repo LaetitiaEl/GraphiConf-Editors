@@ -1,4 +1,4 @@
-#include ".\GOC_Framework\stdafx.h"
+#include "stdafx.h"
 
 //QT includes
 #include <QtGui/QApplication>
@@ -7,7 +7,7 @@
 #include "GOCXMLSpace.h"
 #include "GOCXMLEditor.h"
 #include "GOCXMLLoadingForm.h"
-#include ".\GOC_Framework\GOCObjectMgr.h"
+#include "..\GOC_Framework\GOCObjectMgr.h"
 
 int main(int argc, char *argv[])
 {

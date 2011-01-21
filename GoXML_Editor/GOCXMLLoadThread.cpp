@@ -1,4 +1,4 @@
-#include ".\GOC_Framework\StdAfx.h"
+#include "StdAfx.h"
 #include "GOCXMLLoadThread.h"
 
 GOCXMLLoadThread::GOCXMLLoadThread(GOCXMLEditor *parent):QThread(parent)

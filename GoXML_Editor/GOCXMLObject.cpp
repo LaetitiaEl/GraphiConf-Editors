@@ -1,4 +1,4 @@
-#include ".\GOC_Framework\StdAfx.h"
+#include "StdAfx.h"
 #include "GOCXMLObject.h"
 
 //To attach this object to an existing XML
@@ -121,13 +121,16 @@ void GOCXMLObject::goc_setObjectNodeName(QString objNodeName){
 	//check that the given value is different
 	if(objNodeName == m_ObjectNodeName)
 		return;//TODO:trace
-	else
+    else{
 		m_ObjectNodeName = objNodeName;
+        
+        //Update the object name: the object name and the object's node name are linked
+        GOCObject::setObjectName(m_ObjectNodeName);
+    }
 
 	//Propagate the object name to the model -> view
 	QVariant vNodeName = QVariant(objNodeName);
-        GOCObject::goc_setAttribute(GOCOBJECT_OBJECTNODENAME,vNodeName,true);
-
+    GOCObject::goc_setAttribute(GOCOBJECT_OBJECTNODENAME,vNodeName,true);
 
 }
 //--Object Node Value

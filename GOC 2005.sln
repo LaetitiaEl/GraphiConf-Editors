@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GOC Framework", "GOC_Framework\GOC Framework - 2005.vcproj", "{4525DFAE-2862-4AFD-90BD-FA53DBC42196}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GOC XML Editor", "GoXML_Editor\GOC XML Editor - 2005.vcproj", "{88C5D80A-B500-4194-9387-82B497F6E6E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4525DFAE-2862-4AFD-90BD-FA53DBC42196}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4525DFAE-2862-4AFD-90BD-FA53DBC42196}.Debug|Win32.Build.0 = Debug|Win32
+		{4525DFAE-2862-4AFD-90BD-FA53DBC42196}.Release|Win32.ActiveCfg = Release|Win32
+		{4525DFAE-2862-4AFD-90BD-FA53DBC42196}.Release|Win32.Build.0 = Release|Win32
+		{88C5D80A-B500-4194-9387-82B497F6E6E9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{88C5D80A-B500-4194-9387-82B497F6E6E9}.Debug|Win32.Build.0 = Debug|Win32
+		{88C5D80A-B500-4194-9387-82B497F6E6E9}.Release|Win32.ActiveCfg = Release|Win32
+		{88C5D80A-B500-4194-9387-82B497F6E6E9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		QtVersion = $(DefaultQtVersion)
+	EndGlobalSection
+EndGlobal

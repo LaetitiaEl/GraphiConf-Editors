@@ -1,4 +1,4 @@
-#include ".\GOC_Framework\StdAfx.h"
+#include "StdAfx.h"
 #include "GOCXMLObjectThread.h"
 
 GOCXMLObjectThread::GOCXMLObjectThread(QObject *parent)

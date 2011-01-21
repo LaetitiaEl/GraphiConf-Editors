@@ -1,4 +1,4 @@
-#include ".\GOC_Framework\StdAfx.h"
+#include "StdAfx.h"
 #include "GOCMultiSpace.h"
 
 GOCMultiSpace::GOCMultiSpace(QPointer<GOCMDIView> parentContainer, QPointer<GOCPropertiesView> propertiesView, QPointer<GOCRegister> spRegister, QPointer<GOCXMLEditor> spXMLEditor)

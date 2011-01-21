@@ -3,7 +3,7 @@
 //QT includes
 #include <QDomNode>
 //GOC includes
-#include ".\GOC_Framework\GOCObject.h"
+#include "..\GOC_Framework\GOCObject.h"
 #include "GOCXMLSpace.h"
 #include "GOCXMLLoadThread.h"
 class GOCObject;

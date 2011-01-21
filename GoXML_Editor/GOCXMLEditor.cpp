@@ -1,4 +1,4 @@
-#include ".\GOC_Framework\stdafx.h"
+#include "StdAfx.h"
 #include "GOCXMLEditor.h"
 
 GOCXMLEditor::GOCXMLEditor(QWidget *parent,QPointer<GOCRegister> spGocRegister,GOCXMLLoadThread *thrXMLLoad, Qt::WFlags flags)
@@ -16,11 +16,11 @@ GOCXMLEditor::GOCXMLEditor(QWidget *parent,QPointer<GOCRegister> spGocRegister,G
 	m_formLoading = new GOCXMLLoadingForm();	
 
 	//Init properties view
-        m_spPropertiesView = new GOCPropertiesView(0);        
-        QDockWidget *dockProperties = new QDockWidget("Properties", 0);
+    m_spPropertiesView = new GOCXMLPropertiesView(0);        
+	QDockWidget *dockProperties = new QDockWidget("Properties", 0);
     dockProperties->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
 	dockProperties->setFeatures(QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable );
-    dockProperties->setWidget(m_spPropertiesView);
+    dockProperties->setWidget(m_spPropertiesView);    
     addDockWidget(Qt::RightDockWidgetArea, dockProperties);
 
 	

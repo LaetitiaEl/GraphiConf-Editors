@@ -5,9 +5,9 @@
 #include "ui_GOCXMLEditor.h"
 
 //GOC includes
-#include ".\GOC_Framework\GOCRegister.h"
-#include ".\GOC_Framework\GOCReferencer.h"
-#include ".\GOC_Framework\GOCPropertiesView.h"
+#include "..\GOC_Framework\GOCRegister.h"
+#include "..\GOC_Framework\GOCReferencer.h"
+#include "GOCXMLPropertiesView.h"
 #include "GOCXMLObject.h"
 #include "GOCXMLSpace.h"
 #include "GOCXMLEditor.h"

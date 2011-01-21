@@ -10,7 +10,7 @@
 #include "GOCXMLSpace.h"
 #include "GOCMultiObject.h"
 #include "GOCXMLEditor.h"
-#include ".\GOC_Framework\GOCMDIView.h"
+#include "..\GOC_Framework\GOCMDIView.h"
 class GOCXMLEditor;
 class GOCMDIView;
 

@@ -6,9 +6,9 @@
 #define GOCMULTIOBJECT_COLOR_BACKGND_SUB		QColor(255,165,74)
 #define GOCMULTIOBJECT_COLOR_OUTLINE    		QColor(213,106,0)
 
-#include ".\GOC_Framework\GOCObject.h"
+#include "..\GOC_Framework\GOCObject.h"
 #include "GOCMultiSpace.h"
-#include ".\GOC_Framework\GOCPropertiesView.h"
+#include "..\GOC_Framework\GOCPropertiesView.h"
 class GOCObject;
 class GOCMultiSpace;
 class GOCPropertiesView;

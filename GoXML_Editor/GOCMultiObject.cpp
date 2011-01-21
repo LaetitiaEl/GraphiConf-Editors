@@ -1,4 +1,4 @@
-#include ".\GOC_Framework\StdAfx.h"
+#include "StdAfx.h"
 #include "GOCMultiObject.h"
 
 GOCMultiObject::GOCMultiObject(QPointer<GOCMultiSpace> parent, QPointer<GOCMDIView> gocMdiMainView)
@@ -68,7 +68,7 @@ void GOCMultiObject::goc_slotDoubleClicked(void){
 
         //->Init properties view
         if(spPropertiesView == NULL){
-            spPropertiesView = new GOCPropertiesView(0);
+            spPropertiesView = new GOCXMLPropertiesView(0);
             QDockWidget *dockProperties = new QDockWidget("Properties", 0);
             dockProperties->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
             dockProperties->setFeatures(QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable );

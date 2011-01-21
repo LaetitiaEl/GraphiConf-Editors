@@ -1,4 +1,4 @@
-#include ".\GOC_Framework\StdAfx.h"
+#include "StdAfx.h"
 #include "GOCXMLSpace.h"
 
 GOCXMLSpace::GOCXMLSpace(QPointer<GOCMDIView> parentContainer, QPointer<GOCPropertiesView> propertiesView,
