@@ -144,7 +144,8 @@ void GOCXMLSpace::goc_addXMLObject(QDomElement xmlObjectElem){
                         spAtt->attValue = vNodeValue;
                         spAtt->attVisible = true;
                         spAtt->attRemovable = false;
-			xmlObj->goc_setObjectNodeValue(sNodeValue);		
+			xmlObj->goc_setObjectNodeValue(sNodeValue);
+            spAtt->attNameModifiable = false;
 		}
 		nObjNode = nObjNode.nextSibling();
 	}

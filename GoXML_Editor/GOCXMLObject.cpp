@@ -10,23 +10,26 @@ GOCXMLObject::GOCXMLObject(QDomElement domElement, QPointer<GOCXMLSpace> parent)
 	parent->goc_addObject(this);
 
 	//Init the node name:	
-        QString strNodeName;
-        if(!domElement.hasAttribute(GOCOBJECT_OBJECTNODENAME)){
+    QString strNodeName;
+    if(!domElement.hasAttribute(GOCOBJECT_OBJECTNODENAME)){
 		//Value from XML
-                strNodeName = domElement.tagName();if(strNodeName.isEmpty())strNodeName = "NewNode";
+        strNodeName = domElement.tagName();if(strNodeName.isEmpty())strNodeName = "NewNode";
 		QVariant vNodeName = QVariant(strNodeName);
 		GOCAttribute *gocAtt = new GOCAttribute(this);
 		QSharedPointer<GOCAttribute> spAtt(gocAtt);
 		spAtt->attName = GOCOBJECT_OBJECTNODENAME;
 		spAtt->attValue = vNodeName;
-                spAtt->attVisible = true;
-                spAtt->attRemovable = false;
-                spAtt->attNameModifiable = true;
-		GOCObject::goc_setAttribute(spAtt);
+        spAtt->attVisible = true;
+        spAtt->attRemovable = false;
+        spAtt->attNameModifiable = true;
+		
 		goc_setObjectNodeName(strNodeName);
+
+        spAtt->attNameModifiable = false;
+        GOCObject::goc_setAttribute(spAtt);
 	}else{
 		//Value from GOX
-                strNodeName = domElement.attribute(GOCOBJECT_OBJECTNODENAME);
+        strNodeName = domElement.attribute(GOCOBJECT_OBJECTNODENAME);
 		goc_setObjectNodeName(strNodeName);
 	}	
 
@@ -43,15 +46,18 @@ GOCXMLObject::GOCXMLObject(QDomElement domElement, QPointer<GOCXMLSpace> parent)
 			spAtt->attName = GOCOBJECT_OBJECTNODEVALUE;
 			spAtt->attValue = vNodeValue;
 			spAtt->attVisible = true;
-                        spAtt->attRemovable = false;
-                        spAtt->attNameModifiable = true;
-			GOCObject::goc_setAttribute(spAtt);
+            spAtt->attRemovable = false;
+                        
+			//GOCObject::goc_setAttribute(spAtt);
 			goc_setObjectNodeValue(sNodeValue);
+
+            spAtt->attNameModifiable = false;
+            GOCObject::goc_setAttribute(spAtt);
 		}
 	}else{
 		//Value from GOX
 		QString strNodeValue = domElement.attribute(GOCOBJECT_OBJECTNODEVALUE);
-                goc_setObjectNodeValue(strNodeValue);
+        goc_setObjectNodeValue(strNodeValue);
 	}	
 
 	//
