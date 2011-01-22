@@ -1,4 +1,6 @@
 #include "stdafx.h"
+//#define GOX_DEBUG
+#ifndef GOX_DEBUG
 
 //QT includes
 #include <QtGui/QApplication>
@@ -12,7 +14,7 @@
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	
+
         //Set the icon of the application
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/media/logo/GoC_XML_Editor_Logo"), QSize(), QIcon::Normal, QIcon::On);
@@ -39,3 +41,4 @@ int main(int argc, char *argv[])
 	
 	return a.exec();
 }
+#endif

@@ -5,6 +5,7 @@
 #include <QPointer>
 #include <QtXml>
 
+
 //GOC includes
 #include "..\GOC_Framework\GOCHelpers.h"
 #include "..\GOC_Framework\GOCFrameworkVersion.h"

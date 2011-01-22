@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui xml
+QT       += core gui xml sql
 
 TARGET = GoXML
 TEMPLATE = app
@@ -35,7 +35,8 @@ SOURCES += .\GOC_Framework\stdafx.cpp \
     .\GoXML_Editor\GOCMultiObject.cpp \
     .\GoXML_Editor\main.cpp\
     .\GoXML_Editor\GOCXMLPropertiesView.cpp \
-    GoXML_Editor/stdafx.cpp
+    GoXML_Editor/stdafx.cpp \
+    GOC_Framework/main_gox.cpp
 
 HEADERS  += \
     .\GOC_Framework\stdafx.h \
@@ -69,8 +70,8 @@ FORMS    += .\GoXML_Editor\GOCXMLEditor.ui \
     .\GoXML_Editor\GOCXMLLoadingForm.ui
 
 OTHER_FILES += \
-    .\GoXML_Editor\GoXML_Evolution.txt \
-    .\GoXML_Editor\GoXML.rc
+    .\GoXML_Editor\GoXML.rc \
+    GoX Evolution.txt \
 
 RESOURCES += \
     .\GoXML_Editor\GOC_XML_Editor_Ressource.qrc
