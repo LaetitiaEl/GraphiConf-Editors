@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'GOCMultiSpace.h'
+** Meta object code from reading C++ file 'GOXSqlDatabaseTableSpace.h'
 **
-** Created: Mon Jan 24 16:42:20 2011
+** Created: Tue Jan 25 13:06:29 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 #include "StdAfx.h"
-#include "..\..\GOCMultiSpace.h"
+#include "..\..\GOXSqlDatabaseTableSpace.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'GOCMultiSpace.h' doesn't include <QObject>."
+#error "The header file 'GOXSqlDatabaseTableSpace.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 62
 #error "This file was generated using the moc from 4.7.0. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -18,7 +18,7 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-static const uint qt_meta_data_GOCMultiSpace[] = {
+static const uint qt_meta_data_GOXSqlDatabaseTableSpace[] = {
 
  // content:
        5,       // revision
@@ -34,33 +34,33 @@ static const uint qt_meta_data_GOCMultiSpace[] = {
        0        // eod
 };
 
-static const char qt_meta_stringdata_GOCMultiSpace[] = {
-    "GOCMultiSpace\0"
+static const char qt_meta_stringdata_GOXSqlDatabaseTableSpace[] = {
+    "GOXSqlDatabaseTableSpace\0"
 };
 
-const QMetaObject GOCMultiSpace::staticMetaObject = {
-    { &GOCSpace::staticMetaObject, qt_meta_stringdata_GOCMultiSpace,
-      qt_meta_data_GOCMultiSpace, 0 }
+const QMetaObject GOXSqlDatabaseTableSpace::staticMetaObject = {
+    { &GOCSpace::staticMetaObject, qt_meta_stringdata_GOXSqlDatabaseTableSpace,
+      qt_meta_data_GOXSqlDatabaseTableSpace, 0 }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &GOCMultiSpace::getStaticMetaObject() { return staticMetaObject; }
+const QMetaObject &GOXSqlDatabaseTableSpace::getStaticMetaObject() { return staticMetaObject; }
 #endif //Q_NO_DATA_RELOCATION
 
-const QMetaObject *GOCMultiSpace::metaObject() const
+const QMetaObject *GOXSqlDatabaseTableSpace::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
-void *GOCMultiSpace::qt_metacast(const char *_clname)
+void *GOXSqlDatabaseTableSpace::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_GOCMultiSpace))
-        return static_cast<void*>(const_cast< GOCMultiSpace*>(this));
+    if (!strcmp(_clname, qt_meta_stringdata_GOXSqlDatabaseTableSpace))
+        return static_cast<void*>(const_cast< GOXSqlDatabaseTableSpace*>(this));
     return GOCSpace::qt_metacast(_clname);
 }
 
-int GOCMultiSpace::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int GOXSqlDatabaseTableSpace::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = GOCSpace::qt_metacall(_c, _id, _a);
     if (_id < 0)

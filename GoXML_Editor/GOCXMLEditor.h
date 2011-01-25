@@ -80,7 +80,7 @@ private://Menus,Actions,...
 	//Menu Bar
 	QPointer<QMenuBar>			m_spMenuBar;
 
-        //->Menu File
+    //->Menu File
 	QPointer<QMenu>				m_spMenuFile;
 	//-->Action Loading
 	QPointer<QAction>			m_spActLoad;
@@ -88,10 +88,10 @@ private://Menus,Actions,...
 	QPointer<QAction>			m_spActExport;
 	//-->Actio Save GOX		
 	QPointer<QAction>			m_spActSaveGox;
-        //-->Action Exit
-        QPointer<QAction>			m_spActExit;
+    //-->Action Exit
+    QPointer<QAction>			m_spActExit;
 
-        //->Menu Edit
+    //->Menu Edit
 	QPointer<QMenu>				m_spMenuEdit;
 	//-->Action Add
 	QPointer<QAction>			m_spActAdd;

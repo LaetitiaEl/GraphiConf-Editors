@@ -19,8 +19,8 @@ class GOCMultiSpace : public GOCSpace
 	Q_OBJECT
 
 public:	
-        //todo to remove the parent container mecanims
-        GOCMultiSpace(QPointer<GOCMDIView> parentContainer = 0, QPointer<GOCPropertiesView> propertiesView = 0, QPointer<GOCRegister> spRegister = 0, QPointer<GOCXMLEditor> spXMLEditor = 0);
+    //todo to remove the parent container mecanims
+    GOCMultiSpace(QPointer<GOCMDIView> parentContainer = 0, QPointer<GOCPropertiesView> propertiesView = 0, QPointer<GOCRegister> spRegister = 0, QPointer<GOCXMLEditor> spXMLEditor = 0);
 	virtual ~GOCMultiSpace();
 
 private:

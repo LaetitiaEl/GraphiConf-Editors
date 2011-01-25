@@ -24,41 +24,41 @@ GOCXMLEditor::GOCXMLEditor(QWidget *parent,QPointer<GOCRegister> spGocRegister,G
     addDockWidget(Qt::RightDockWidgetArea, dockProperties);
 
 	
-	//
-	//Create the main view
-        m_spMainView = new GOCMDIView(0, 0); //->DEPRECATED
-        //setCentralWidget(m_spMainView);
-        //m_spMainView->setViewMode(QMdiArea::TabbedView);
-        //m_spMainView->setTabShape(QTabWidget::Triangular);
+    //
+    //Create the main view
+    m_spMainView = new GOCMDIView(0, 0); //->DEPRECATED
+    //setCentralWidget(m_spMainView);
+    //m_spMainView->setViewMode(QMdiArea::TabbedView);
+    //m_spMainView->setTabShape(QTabWidget::Triangular);
 
-	//Init the multispace view:
-        m_spMultiSpace = new GOCMultiSpace(m_spMainView,m_spPropertiesView,spGocRegister,this);
-	QPointer<GOCSpaceView> spMultiSpaceView;
-	m_spMultiSpace->goc_getSpaceView(&m_spMultiSpaceView);	
-	TestQPointerVoid(m_spMultiSpaceView);
-        m_spMultiSpaceView->scene()->setSceneRect(0,0,100,100);
+    //Init the multispace view:
+    m_spMultiSpace = new GOCMultiSpace(m_spMainView,m_spPropertiesView,spGocRegister,this);
+    QPointer<GOCSpaceView> spMultiSpaceView;
+    m_spMultiSpace->goc_getSpaceView(&m_spMultiSpaceView);	
+    TestQPointerVoid(m_spMultiSpaceView);
+    m_spMultiSpaceView->scene()->setSceneRect(0,0,100,100);
 
-	QDockWidget *dockMultiSpace = new QDockWidget("Loaded Files", this);
+    QDockWidget *dockMultiSpace = new QDockWidget("Loaded Files", this);
     dockMultiSpace->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
-	dockMultiSpace->setFeatures(QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable );
+    dockMultiSpace->setFeatures(QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable );
     dockMultiSpace->setWidget(m_spMultiSpaceView);
     //addDockWidget(Qt::LeftDockWidgetArea, dockMultiSpace);
-        dockMultiSpace->setMinimumSize(200,480);
+    dockMultiSpace->setMinimumSize(200,480);
 
-        m_spMultiSpaceView->setMinimumSize(200,480);
-        setCentralWidget(m_spMultiSpaceView);
+    m_spMultiSpaceView->setMinimumSize(200,480);
+    setCentralWidget(m_spMultiSpaceView);
 
 
-        //Set the ICON of the window
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/media/logo/GoXML_Icon.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        setWindowIcon(icon);
+    //Set the ICON of the window
+    QIcon icon;
+    icon.addFile(QString::fromUtf8(":/media/logo/GoXML_Icon.ico"), QSize(), QIcon::Normal, QIcon::Off);
+    setWindowIcon(icon);
 
-	//Initialize the Menu Bar element
-	hRes = goc_InitMenuElements();
-	IfErrorTrace("goc_InitMenuElements Failed");
-	
-        setAttribute(Qt::WA_DeleteOnClose);
+    //Initialize the Menu Bar element
+    hRes = goc_InitMenuElements();
+    IfErrorTrace("goc_InitMenuElements Failed");
+
+    setAttribute(Qt::WA_DeleteOnClose);
 }
 
 GOCXMLEditor::~GOCXMLEditor()

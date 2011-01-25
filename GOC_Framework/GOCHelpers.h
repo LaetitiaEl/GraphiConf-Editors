@@ -15,6 +15,7 @@
 	#define TraceAndReturnError(TraceValue)	hRes = GOC_FAIL;		qDebug()<<"ERROR : "<<sMethodName<<" : "<<TraceValue;	return hRes;
 	#define TraceError(TraceValue)									qDebug()<<"ERROR : "<<sMethodName<<" : "<<TraceValue;
 	#define IfErrorTrace(TraceValue)	if(hRes == GOC_FAIL){	qDebug()<<"ERROR : "<<sMethodName<<" : "<<TraceValue;};
+    #define Trace(TraceValue)									qDebug()<<"TRACE : "<<sMethodName<<" : "<<TraceValue;
 
 #else
 	//->Functional Traces
@@ -24,6 +25,7 @@
 	#define TraceAndReturnError(TraceValue)	hRes = GOC_FAIL;		return hRes;
 	#define TraceError(TraceValue)									
 	#define IfErrorTrace(TraceValue)	if(hRes == GOC_FAIL){	};
+    #define Trace(TraceValue)
 
 #endif
 
@@ -41,6 +43,11 @@
 #define TestPointer(p) { \
 	if (!p) { \
 		hRes = GOC_POINTER; qDebug()<<"ERROR : Pointer["<<#p<<"] is Null"; return hRes;\
+	} \
+} 
+#define TestPointerVoid(p) { \
+	if (!p) { \
+		hRes = GOC_POINTER; qDebug()<<"ERROR : Pointer["<<#p<<"] is Null"; return;\
 	} \
 } 
 

@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GOC Framework", "GOC_Framew
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GOC XML Editor", "GoXML_Editor\GOC XML Editor - 2005.vcproj", "{88C5D80A-B500-4194-9387-82B497F6E6E9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GoSQL_Editor", "GoSQL_Editor\GoSQL_Editor.vcproj", "{A39D499D-D4C2-40F1-85C8-F709F88FF6B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,10 @@ Global
 		{88C5D80A-B500-4194-9387-82B497F6E6E9}.Debug|Win32.Build.0 = Debug|Win32
 		{88C5D80A-B500-4194-9387-82B497F6E6E9}.Release|Win32.ActiveCfg = Release|Win32
 		{88C5D80A-B500-4194-9387-82B497F6E6E9}.Release|Win32.Build.0 = Release|Win32
+		{A39D499D-D4C2-40F1-85C8-F709F88FF6B1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A39D499D-D4C2-40F1-85C8-F709F88FF6B1}.Debug|Win32.Build.0 = Debug|Win32
+		{A39D499D-D4C2-40F1-85C8-F709F88FF6B1}.Release|Win32.ActiveCfg = Release|Win32
+		{A39D499D-D4C2-40F1-85C8-F709F88FF6B1}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
