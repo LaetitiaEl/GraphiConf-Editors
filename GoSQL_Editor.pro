@@ -9,6 +9,8 @@ QT       += core gui xml sql
 TARGET = GoSQL_Editor
 TEMPLATE = app
 
+RC_FILE = .\GoSQL_Editor\GoSQL_Editor.rc
+
 OTHER_FILES += \
     GoSQL_Editor/GoSQL_Editor.rc \
     GoSQL_Editor/GoSQL_Editor.ico

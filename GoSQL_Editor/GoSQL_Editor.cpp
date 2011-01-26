@@ -31,7 +31,7 @@ GoSQL_Editor::GoSQL_Editor(QWidget *parent, Qt::WFlags flags)
 
     //Set the ICON of the window
     QIcon icon;
-    icon.addFile(QString::fromUtf8(":/media/logo/GoSQL_Icon.ico"), QSize(), QIcon::Normal, QIcon::Off);
+    icon.addFile(QString::fromUtf8(":/GoSQL_Editor/Resources/GoSQL_Icon.ico"), QSize(), QIcon::Normal, QIcon::Off);
     setWindowIcon(icon);
 
     //Initialize the Menu Bar element

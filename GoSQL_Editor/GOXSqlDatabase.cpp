@@ -35,7 +35,14 @@ GOXSqlDatabase::~GOXSqlDatabase()
 //! Connection/disconnection to database
 HRESULT GOXSqlDatabase::gox_databaseConnect(){
     MethodBegin("GOXSqlDatabase::gox_databaseConnect");
-    m_sqlDataBase.open();
+
+    if(m_sqlDataBase.isOpen())
+        return S_OK;
+
+    bool ok = m_sqlDataBase.open();
+
+    if(!ok)
+        return GOC_FAIL;
 
     //Check if there are tables in the database:
     QSqlQuery query(QSqlDatabase::database(m_sConnectionName));
@@ -45,7 +52,7 @@ HRESULT GOXSqlDatabase::gox_databaseConnect(){
     }
     
     //Create a subspace of the object
-    //goc_setObjectSubbed2(false);//Temporary solution
+    goc_setObjectSubbed2(false);//Temporary solution
     goc_setObjectSubbed2(true);
     QPointer<GOCSpace> spObjectSpace;
     goc_getObjectSpace(&spObjectSpace);
@@ -78,32 +85,34 @@ void GOXSqlDatabase::goc_setObjectSubbed2(bool bIsObjectSubbed){
 	if(m_ObjectSubbed == bIsObjectSubbed)
 		return;
 
-	if(bIsObjectSubbed){
-		//create a subspace
-		QPointer<GOCSpace> spParentSpace;
-		goc_getSpaceParent(&spParentSpace);
-		if(spParentSpace.isNull())
-			return;//TODO: trace
-		QPointer<GOCMDIView> spMainView;
-		spParentSpace->goc_getMainView(&spMainView);
-		
-        QPointer<GOCPropertiesView> spPropView;
-		spParentSpace->goc_getPropertiesView(&spPropView);
+        if(bIsObjectSubbed){
+            //create a subspace
+            QPointer<GOCSpace> spParentSpace;
+            goc_getSpaceParent(&spParentSpace);
+            if(spParentSpace.isNull())
+                return;//TODO: trace
+            if(m_spObjectSpace.isNull()){
+                QPointer<GOCMDIView> spMainView;
+                spParentSpace->goc_getMainView(&spMainView);
 
-        QPointer<GOCRegister> spRegister;
-		spParentSpace->goc_getRegister(&spRegister);
-		
-        GOXSqlDatabaseTableSpace *spObjectSpace = new GOXSqlDatabaseTableSpace(spMainView,spPropView,spRegister);
-        m_spObjectSpace = qobject_cast<GOCSpace*>(spObjectSpace);
+                QPointer<GOCPropertiesView> spPropView;
+                spParentSpace->goc_getPropertiesView(&spPropView);
 
-		//set background color to gray
-                goc_setBackGroundColor(m_backGroundColorSub);
-	}else{
-		delete m_spObjectSpace;
+                QPointer<GOCRegister> spRegister;
+                spParentSpace->goc_getRegister(&spRegister);
 
-		//set background color to white
-                goc_setBackGroundColor(m_backGroundColorNoSub);
-	}
+                GOXSqlDatabaseTableSpace *spObjectSpace = new GOXSqlDatabaseTableSpace(spMainView,spPropView,spRegister);
+                m_spObjectSpace = qobject_cast<GOCSpace*>(spObjectSpace);
+            }
+
+            //set background color to gray
+            goc_setBackGroundColor(m_backGroundColorSub);
+        }else{
+            m_spObjectSpace->goc_deleteObjectAll();
+
+            //set background color to white
+            goc_setBackGroundColor(m_backGroundColorNoSub);
+        }
 
 	m_ObjectSubbed = bIsObjectSubbed;
 }
